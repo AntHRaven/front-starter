@@ -5,7 +5,7 @@
       class="el-menu-vertical-demo"
       :collapse="isCollapse"
       :router="useRouter"
-      active-text-color="#FFD53E"
+      active-text-color="#7133ac"
       style="
         min-height: 100vh;
         text-align: left;

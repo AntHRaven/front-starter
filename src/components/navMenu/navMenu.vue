@@ -81,7 +81,7 @@ export default {
       this.$store.dispatch("setShowModal", {
         title: "Вход",
         modalType: "showLoginModal",
-        width: "55%",
+        width: "35%",
       });
     },
   },

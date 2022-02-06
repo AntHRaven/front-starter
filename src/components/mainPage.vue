@@ -1,5 +1,9 @@
 <template>
   <div>
+    <autogenerate-form
+      @saveForm="saveForm"
+      :filtered-fields="fields"
+    ></autogenerate-form>
     <custom-table
       :data="data"
       :columns="columns"
@@ -11,11 +15,20 @@
 
 <script>
 import CustomTable from "@/components/general/customTable";
+import AutogenerateForm from "@/components/general/autogenerateForm";
 export default {
   name: "mainPage",
-  components: { CustomTable },
+  components: { AutogenerateForm, CustomTable },
   data() {
     return {
+      fields: [
+        {
+          label: "TEST",
+          name: "test",
+          placeholder: "testPl",
+          type: "TEXT",
+        },
+      ],
       data: {
         tableData: [
           {
@@ -36,6 +49,10 @@ export default {
   },
 
   methods: {
+    saveForm(form) {
+      console.log(form);
+    },
+
     sizeChange(val) {
       console.log(val);
     },

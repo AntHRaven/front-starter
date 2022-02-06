@@ -5,7 +5,7 @@
       padding: 30px;
       background-color: #fff;
       border-radius: 4px;
-      box-shadow: rgb(200 200 200 / 50%) 0px 0px 10px;
+      box-shadow: rgb(200 200 200 / 50%) 0 0 10px;
       min-height: 500px;
       border: solid 1px #e6e6e6;
     "
