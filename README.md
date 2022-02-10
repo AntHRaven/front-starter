@@ -1,8 +1,8 @@
-# putevie-listy
+# Vue-cms
 
-## Project setup
+## Описание
 ```
-yarn install
+CMS платформа для создания ИС на vue
 ```
 
 ### Compiles and hot-reloads for development
@@ -19,6 +19,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
