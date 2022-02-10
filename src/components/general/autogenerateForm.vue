@@ -2,6 +2,7 @@
   <div>
     <el-form
       ref="form"
+      :rules="formRules"
       size="mini"
       :model="searchForm"
       label-suffix=":"
@@ -9,7 +10,7 @@
       label-width="50%"
     >
       <el-row>
-        <div v-for="(field, index) in filteredFields" :key="index">
+        <div v-for="(field, index) in formFields" :key="index">
           <el-form-item :key="index" :label="field.label" :prop="field.name">
             <el-input
               v-if="field.type === 'TEXT'"
@@ -57,12 +58,16 @@
 export default {
   name: "autogenerateForm",
   props: {
-    filteredFields: {
+    formFields: {
       type: Array,
+      required: true
     },
     dateFormat: {
       type: String,
       default: "yyyy-MM-dd",
+    },
+    formRules: {
+      type: Array,
     },
   },
 

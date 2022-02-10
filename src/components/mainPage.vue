@@ -1,8 +1,9 @@
 <template>
   <div>
     <autogenerate-form
+      :form-rules="rules"
       @saveForm="saveForm"
-      :filtered-fields="fields"
+      :form-fields="fields"
     ></autogenerate-form>
     <custom-table
       :data="data"
@@ -21,6 +22,15 @@ export default {
   components: { AutogenerateForm, CustomTable },
   data() {
     return {
+      rules: {
+        test: [
+          {
+            required: true,
+            message: "Please input Activity name",
+            trigger: "blur",
+          },
+        ],
+      },
       fields: [
         {
           label: "TEST",
